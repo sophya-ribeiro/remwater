@@ -1,6 +1,6 @@
 import { View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
-import { createStackNavigator } from '@react-navigation/native-stack'
+import { createStackNavigator } from '@react-navigation/stack'
 import { useCallback } from 'react';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
@@ -22,6 +22,7 @@ export default function App() {
     'Poppins-SemiBold': require('./src/assets/fonts/Poppins-SemiBold.ttf'),
     'Poppins-Thin': require('./src/assets/fonts/Poppins-Thin.ttf'),
     'Questrial-Regular': require('./src/assets/fonts/Questrial-Regular.ttf'),
+    'Montserrat-VariableFont_wght': require('./src/assets/fonts/Montserrat-VariableFont_wght.ttf')
   });
 
   const onLayoutRootView = useCallback(async () => {
@@ -36,19 +37,27 @@ export default function App() {
 
   return (
     <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
+
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Inicio">
+        <Stack.Navigator
+          screenOptions={{
+            headerShown: false
+          }}>
           <Stack.Screen
-            name="Inicio"
+
+            name='Inicio'
             component={Inicio}
           />
+
           <Stack.Screen
-            name="Configuracao"
+            name='Configuracao'
             component={Configuracao}
           />
         </Stack.Navigator>
       </NavigationContainer>
+
     </View>
+
   );
 }
 

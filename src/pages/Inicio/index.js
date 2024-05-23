@@ -1,31 +1,39 @@
-import { Text, View, Image } from 'react-native'
+import { Text, View, Image, TouchableOpacity } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import { styles } from "./styles"
 
-export function Inicio() {
+export function Inicio({ navigation }) {
 
     return (
 
         <View style={styles.container}>
-            <View style={styles.menu}>
 
-                <View style={styles.menuIcone}>
-                    <Ionicons name="home-outline" color={'#F48E28'} size={25} />
-                </View>
+            <View style={styles.menu}>
 
                 <View style={styles.menuTexto}>
                     <Text style={styles.textoPagina}>Início</Text>
                 </View>
 
-                <View style={styles.menuLogo}>
-                    {/* <Image
-                        source={require("../../assets/images/logo.png")}
-                        style={styles.logo}
-                    /> */}
+                <View style={styles.menuIcone}>
+                    <TouchableOpacity onPress={() => navigation.navigate('Configuracao')}>
+                        <Ionicons name="settings-sharp" color={'#3d3d3d'} size={25} />
+                    </TouchableOpacity>
                 </View>
+
             </View>
 
             <View style={styles.conteudo}>
+                <View style={styles.lembrete}>
+                    <Text style={styles.lembreteTexto}>Lembretes ativos</Text>
+                    <View>
+                        <Text></Text>
+                    </View>
+                </View>
+
+                <View>
+
+                </View>
+
             </View>
         </View>
     );

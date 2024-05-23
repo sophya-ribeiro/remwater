@@ -18,40 +18,40 @@ export const styles = StyleSheet.create({
         }),
         backgroundColor: "#FFF",
         flexDirection: 'row',       
-        paddingBottom: 15,
+        paddingBottom: 10,
         paddingRight: 20,
         paddingLeft: 20,
+        justifyContent: 'space-between',
         width: "100%",
         alignItems: 'center',
         borderBottomWidth: 0.5,
         borderColor: "#E0E0E0"
-    },
-    menuIcone: {
-        width: "14%",
-    },
-    icone: {
-        width: 30,
-        height: 30,
     },
     menuTexto: {
         width: "50%",
     },
     textoPagina: {
         fontSize: 16,
-        fontFamily: 'Poppins-Regular',
+        fontFamily: 'Montserrat-VariableFont_wght',
+        fontWeight: '800',
         color: "#000",
     },
     textoSubpagina: {
         fontSize: 12,
         color: "#000",
     },
-    menuLogo: {
+    menuIcone: {
         width: "10%",
-        paddingLeft: 60,
     },
-    logo: {
-        width: 45,
-        height: 30,
+    conteudo:{
+        padding: 20,
     },
+    lembrete:{
+        flexDirection: 'row',
+    },
+    lembreteTexto:{
+        fontFamily: 'Poppins-Regular',
+        fontSize: 14,
+    }
 });
 
