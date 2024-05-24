@@ -11,24 +11,31 @@ export function Inicio({ navigation }) {
             <View style={styles.menu}>
 
                 <View style={styles.menuTexto}>
-                    <Text style={styles.textoPagina}>Início</Text>
+                    <Text style={styles.textoPagina}>Meus lembretes</Text>
                 </View>
 
                 <View style={styles.menuIcone}>
+
+                <TouchableOpacity onPress={() => navigation.navigate('CriarLembrete')}>
+                        <Ionicons name="add-circle" color={'#3d3d3d'} size={22} />
+                    </TouchableOpacity>
+
                     <TouchableOpacity onPress={() => navigation.navigate('Configuracao')}>
                         <Ionicons name="settings-sharp" color={'#3d3d3d'} size={22} />
                     </TouchableOpacity>
+                    
                 </View>
+
 
             </View>
 
             <ScrollView style={styles.conteudo}>
-                <View style={styles.lembrete}>
-                    <Text style={styles.lembreteTexto}>Lembretes ativos</Text>
-                    <View>
-                        <Text></Text>
-                    </View>
-                </View>
+
+                <TouchableOpacity style={styles.containerLembrete}>
+
+                    <Text style={styles.lembreteTitulo}>Tomar água dia de semana</Text>
+
+                </TouchableOpacity>
 
                 <View style={styles.rodape}>
                     <Text style={styles.rodapeTexto}>Feito por</Text>

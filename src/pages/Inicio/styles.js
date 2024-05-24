@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
         backgroundColor: "#FFF"
     },
     menuTexto: {
-        width: "50%",
+        width: "75%",
     },
     textoPagina: {
         fontSize: 16,
@@ -39,22 +39,34 @@ export const styles = StyleSheet.create({
         color: "#000",
     },
     menuIcone: {
-        width: "10%",
+        width: "20%",
+        flexDirection: 'row',
+        gap: 25,
     },
-    conteudo:{
+    conteudo: {
         padding: 20,
     },
-    lembrete:{
+    lembrete: {
         flexDirection: 'row',
     },
-    lembreteTexto:{
-        fontFamily: 'Poppins-Regular',
+    lembreteTipo: {
+        fontFamily: 'Poppins-Medium',
         fontSize: 14,
     },
+    containerLembrete: {
+        marginTop: 10,
+        padding: 20,
+        borderRadius: 5,
+        backgroundColor: "#0081ce",
+    },
+    lembreteTitulo: {
+        color: "#FFF",
+        fontFamily: 'Questrial-Regular',
+        fontSize: 15,
+    } ,
     rodape: {
-        opacity: 1,
         flexDirection: 'row',
-        marginTop: 550,
+        marginTop: 400,
         justifyContent: 'center',
         alignItems: 'center',
         gap: 5,
@@ -64,7 +76,7 @@ export const styles = StyleSheet.create({
         fontFamily: 'Poppins-Regular'
     },
     textoGitHub: {
-        color: "#eff9ff",
+        color: "#0081ce",
         fontSize: 11,
         fontFamily: 'Poppins-Medium'
     },

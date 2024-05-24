@@ -6,6 +6,7 @@ import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { Inicio } from './src/pages/Inicio'
 import { Configuracao } from './src/pages/Configuracao'
+import { CriarLembrete } from './src/pages/CriarLembrete'
 
 SplashScreen.preventAutoHideAsync();
 const Stack = createStackNavigator();
@@ -39,7 +40,7 @@ export default function App() {
     <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
 
       <NavigationContainer>
-        <Stack.Navigator 
+        <Stack.Navigator
           initialRouteName='Inicio'
           screenOptions={{
             headerShown: false,
@@ -51,9 +52,9 @@ export default function App() {
             component={Inicio}
             options={{
               headerShown: false,
-              presentation:  'Modal',
+              presentation: 'Modal',
               animationTypeForReplace: 'push',
-              animation:'slide_from_right'
+              animation: 'slide_from_right'
             }}
           />
 
@@ -61,6 +62,12 @@ export default function App() {
             name='Configuracao'
             component={Configuracao}
           />
+
+          <Stack.Screen
+            name='CriarLembrete'
+            component={CriarLembrete}
+          />
+
         </Stack.Navigator>
       </NavigationContainer>
 
