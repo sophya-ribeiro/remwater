@@ -39,14 +39,22 @@ export default function App() {
     <View style={{ flex: 1 }} onLayout={onLayoutRootView}>
 
       <NavigationContainer>
-        <Stack.Navigator
+        <Stack.Navigator 
+          initialRouteName='Inicio'
           screenOptions={{
-            headerShown: false
+            headerShown: false,
+            gestureEnabled: false,
+            gestureDirection: 'horizontal',
           }}>
           <Stack.Screen
-
             name='Inicio'
             component={Inicio}
+            options={{
+              headerShown: false,
+              presentation:  'Modal',
+              animationTypeForReplace: 'push',
+              animation:'slide_from_right'
+            }}
           />
 
           <Stack.Screen

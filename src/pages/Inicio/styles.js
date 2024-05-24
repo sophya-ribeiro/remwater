@@ -2,10 +2,8 @@ import { StyleSheet, Platform } from 'react-native'
 
 export const styles = StyleSheet.create({
     container: {
-        marginBottom: 30,
         flex: 1,
-        backgroundColor: "#f2f1f2",
-
+        backgroundColor: "#fafafa",
     },
     menu: {
         ...Platform.select({
@@ -13,19 +11,19 @@ export const styles = StyleSheet.create({
                 paddingTop: 55,
             },
             android: {
-                paddingTop: 40,
+                paddingTop: 45,
             },
         }),
-        backgroundColor: "#FFF",
-        flexDirection: 'row',       
-        paddingBottom: 10,
+        flexDirection: 'row',
+        paddingBottom: 15,
         paddingRight: 20,
         paddingLeft: 20,
-        justifyContent: 'space-between',
         width: "100%",
         alignItems: 'center',
-        borderBottomWidth: 0.5,
-        borderColor: "#E0E0E0"
+        borderBottomWidth: 0.,
+        borderColor: "#E0E0E0",
+        justifyContent: 'space-between',
+        backgroundColor: "#FFF"
     },
     menuTexto: {
         width: "50%",
@@ -52,6 +50,23 @@ export const styles = StyleSheet.create({
     lembreteTexto:{
         fontFamily: 'Poppins-Regular',
         fontSize: 14,
-    }
+    },
+    rodape: {
+        opacity: 1,
+        flexDirection: 'row',
+        marginTop: 550,
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: 5,
+    },
+    rodapeTexto: {
+        fontSize: 11,
+        fontFamily: 'Poppins-Regular'
+    },
+    textoGitHub: {
+        color: "#eff9ff",
+        fontSize: 11,
+        fontFamily: 'Poppins-Medium'
+    },
 });
 

@@ -1,4 +1,4 @@
-import { Text, View, Image, TouchableOpacity } from 'react-native'
+import { Text, View, Image, TouchableOpacity, ScrollView } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import { styles } from "./styles"
 
@@ -16,13 +16,13 @@ export function Inicio({ navigation }) {
 
                 <View style={styles.menuIcone}>
                     <TouchableOpacity onPress={() => navigation.navigate('Configuracao')}>
-                        <Ionicons name="settings-sharp" color={'#3d3d3d'} size={25} />
+                        <Ionicons name="settings-sharp" color={'#3d3d3d'} size={22} />
                     </TouchableOpacity>
                 </View>
 
             </View>
 
-            <View style={styles.conteudo}>
+            <ScrollView style={styles.conteudo}>
                 <View style={styles.lembrete}>
                     <Text style={styles.lembreteTexto}>Lembretes ativos</Text>
                     <View>
@@ -30,11 +30,16 @@ export function Inicio({ navigation }) {
                     </View>
                 </View>
 
-                <View>
+                <View style={styles.rodape}>
+                    <Text style={styles.rodapeTexto}>Feito por</Text>
 
+                    <TouchableOpacity
+                        onPress={() => Linking.openURL('https://github.com/sophya-ribeiro')}>
+                        <Text style={styles.textoGitHub}>Sophya Ribeiro</Text>
+                    </TouchableOpacity>
                 </View>
 
-            </View>
+            </ScrollView>
         </View>
     );
 
